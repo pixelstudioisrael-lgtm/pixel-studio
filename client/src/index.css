@@ -225,15 +225,14 @@
    */
   .home-parchment-bg {
     background-color: #f9f6f0;
-    /* שם הקובץ hero-background (1).png — מקודד במלואו כדי שלא יישברו סוגריים ב-minify */
-    background-image: url("/hero-background%20%281%29.png");
+    background-image: url("/hero-background.webp");
     background-repeat: repeat-y;
     background-size: 100% auto;
     background-position: center top;
   }
 
   .parchment-texture-layer {
-    background-image: url("/hero-background%20%281%29.png");
+    background-image: url("/hero-background.webp");
     background-repeat: repeat-y;
     background-size: 100% auto;
     background-position: center top;

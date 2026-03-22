@@ -6,7 +6,7 @@ import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { publicUrl } from "@/lib/publicUrl";
 
 const COMPASS_IMG = publicUrl(`__manus__/${encodeURIComponent("מחוגה.png")}`);
-const FOOTER_BG = publicUrl(encodeURI("hero-background (1).png"));
+const FOOTER_BG = publicUrl("hero-background.webp");
 
 const EMAIL = "pixelstudioisrael@gmail.com";
 const MAILTO = `mailto:${EMAIL}`;

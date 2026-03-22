@@ -6,8 +6,10 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { publicUrl } from "@/lib/publicUrl";
 
-/** תמונה בראש תפריט המובייל */
-const MOBILE_MENU_IMG = publicUrl(`__manus__/${encodeURIComponent("1.png")}`);
+/** תמונה בראש תפריט המובייל — public/אירונים חדשים/מצפן.svg */
+const MOBILE_MENU_IMG = publicUrl(
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("מצפן.svg")}`,
+);
 
 const NAV_ITEMS = [
   { href: "/", label: "דף הבית" },
@@ -123,7 +125,7 @@ export function SiteHeader() {
                   src={MOBILE_MENU_IMG}
                   alt=""
                   className="h-auto max-h-[6.5rem] w-auto origin-center object-contain object-center drop-shadow-md"
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                   initial={{ rotate: 0 }}
                   animate={{ rotate: reduceMotion ? 0 : 1080 }}

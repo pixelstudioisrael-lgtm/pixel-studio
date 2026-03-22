@@ -5,13 +5,13 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useRef, useState, useEffect, useLayoutEffect } from "react";
 
-const HERO_BG = publicUrl(encodeURIComponent("hero-background (1).png"));
-const FLYING_MACHINE = publicUrl("flying-machine-parallax.png");
-const PALETTE_IMG = publicUrl(`__manus__/${encodeURIComponent("פלטת צבעים חדשה.png")}`);
+const HERO_BG = publicUrl("hero-background.webp");
+const FLYING_MACHINE = publicUrl("flying-machine-parallax.webp");
+/** public/אירונים חדשים/פלטת צבעים חדש SZG.svg — פלטה ליד מונה ליזה (דסקטופ + מובייל) */
+const PALETTE_IMG = publicUrl(
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("פלטת צבעים חדש SZG.svg")}`,
+);
 const MONA_LISA_IMG = publicUrl(`__manus__/אמונה ליזה.png`);
-
-/** נתיב ישיר ב-UTF-8 (ללא קידוד כפול) — תואם טוב יותר לשרת הקבצים הסטטיים של Vite */
-const PORTFOLIO_FOLDER = publicUrl(`portfolio-assets/תיק עבודות`);
 
 function shuffleWithSeed<T>(arr: T[], seed: number): T[] {
   const a = [...arr];
@@ -27,10 +27,8 @@ function shuffleWithSeed<T>(arr: T[], seed: number): T[] {
 const IMAGE_INDICES = Array.from({ length: 64 }, (_, i) => i + 1);
 const SHUFFLED_IMAGES = shuffleWithSeed(IMAGE_INDICES, 42);
 
-// 64 מסגרות ריבועיות — תמונה אחת בכל מסגרת, כל תמונה פעם אחת
-const YULI_IMG = `${PORTFOLIO_FOLDER}/יולי בולבי.png`;
 const portfolioItems = SHUFFLED_IMAGES.map((idx) => ({
-  src: idx === 38 ? YULI_IMG : `${PORTFOLIO_FOLDER}/${idx}.png`,
+  src: publicUrl(`Gallery/${idx}.webp`),
 }));
 
 /** קו עליון של שכבת הדקורציה במובייל — נמוך מהציטוט כדי שלא יכסה את הטקסט (היה 168px) */

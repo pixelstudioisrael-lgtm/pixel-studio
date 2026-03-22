@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { publicUrl } from "@/lib/publicUrl";
 
-const HERO_BG = publicUrl(encodeURIComponent("hero-background (1).png"));
+const HERO_BG = publicUrl("hero-background.webp");
 
 export default function Terms() {
   useEffect(() => {

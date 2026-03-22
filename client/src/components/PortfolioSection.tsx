@@ -2,64 +2,65 @@ import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
+import { publicUrl } from "@/lib/publicUrl";
 
-const FLYING_MACHINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663459270785/T2vXmtCoKPgG35XUxSP9Qu/flying-machine-parallax-WYCWkoezX3SivLS79kjV9q.webp";
+const FLYING_MACHINE = publicUrl("flying-machine-parallax.webp");
 
-const PORTFOLIO_BASE = `/portfolio-assets/${encodeURIComponent("תיק עבודות")}`;
+/** תמונות מ־`public/Gallery/*.webp` — מספר הקובץ תואם לפריט במסגרת */
 const projects = [
   {
     title: "אלי קדושים",
     category: "Branding",
     description: "ביטוח • פנסיה • פיננסים",
-    image: `${PORTFOLIO_BASE}/11.png`,
+    image: publicUrl("Gallery/11.webp"),
   },
   {
     title: "יהונתן אצור",
     category: "Branding",
     description: "משרד עורכי דין",
-    image: `${PORTFOLIO_BASE}/12.png`,
+    image: publicUrl("Gallery/12.webp"),
   },
   {
     title: "Silora Couture",
     category: "Branding",
     description: "Bridal Dresses Atelier",
-    image: `${PORTFOLIO_BASE}/53.png`,
+    image: publicUrl("Gallery/53.webp"),
   },
   {
     title: "Naama Hrshkovitz",
     category: "Branding",
     description: "Eyebrows Artist",
-    image: `${PORTFOLIO_BASE}/52.png`,
+    image: publicUrl("Gallery/52.webp"),
   },
   {
     title: "Raziel Jewelry",
     category: "Branding",
     description: "זוהר של רגעים בלתי נשכחים",
-    image: `${PORTFOLIO_BASE}/6.png`,
+    image: publicUrl("Gallery/6.webp"),
   },
   {
     title: "Elistone Solutions",
     category: "Branding",
     description: "Your Natural Choice",
-    image: `${PORTFOLIO_BASE}/7.png`,
+    image: publicUrl("Gallery/7.webp"),
   },
   {
     title: "Elifine",
     category: "Branding",
     description: "Hair Designer",
-    image: `${PORTFOLIO_BASE}/1.png`,
+    image: publicUrl("Gallery/1.webp"),
   },
   {
     title: "יולי בולבי",
     category: "Branding",
     description: "Medical Esthetician",
-    image: `${PORTFOLIO_BASE}/${encodeURIComponent("יולי בולבי.png")}`,
+    image: publicUrl("Gallery/38.webp"),
   },
   {
     title: "תהל אור",
     category: "Branding",
     description: "חשמלאי מוסמך • מקצוענות פוגשת אמינות",
-    image: `${PORTFOLIO_BASE}/24.png`,
+    image: publicUrl("Gallery/24.webp"),
   },
 ];
 
@@ -159,7 +160,9 @@ export function PortfolioSection() {
                   />
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 z-10 h-full w-full object-cover"
                   />
                 </div>
@@ -236,7 +239,9 @@ export function PortfolioSection() {
             >
               <img
                 src={projects[lightboxIndex].image}
-                alt={projects[lightboxIndex].title}
+                alt=""
+                loading="eager"
+                decoding="async"
                 className="max-w-full max-h-[82vh] object-contain rounded-lg shadow-2xl"
               />
 

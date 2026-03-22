@@ -15,8 +15,8 @@ function useMatchMaxMd() {
   );
 }
 
-const FLYING_MACHINE = "/flying-machine-parallax.png";
-const LOGO = publicUrl(`__manus__/${encodeURIComponent("לוגו פיקסל וינטג.png")}`);
+const FLYING_MACHINE = publicUrl("flying-machine-parallax.webp");
+const LOGO = publicUrl("portfolio-assets/pixel-logo.svg");
 
 const WA_HREF =
   "https://wa.me/972552892682?text=%D7%A9%D7%9C%D7%95%D7%9D%20Pixel%20Studio";
@@ -77,6 +77,10 @@ export function HeroSection() {
           <motion.img
             src={LOGO}
             alt="Pixel Studio Logo"
+            width={256}
+            height={256}
+            loading="eager"
+            fetchPriority="high"
             className="w-auto max-md:h-[8.8rem] object-contain drop-shadow-2xl md:h-64"
             initial={
               reduceMotion

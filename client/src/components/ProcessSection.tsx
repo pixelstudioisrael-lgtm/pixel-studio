@@ -1,25 +1,29 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { publicUrl } from "@/lib/publicUrl";
 
-const OLD_DESIGNS_BASE = `/__manus__/${encodeURIComponent("עיצובים ישנים")}`;
-const PALETTE_NEW_IMG = `/__manus__/${encodeURIComponent("פלטת צבעים חדשה.png")}`;
+/** public/אירונים חדשים/זכוכית מגדלת.svg — שלב 02 */
+const STEP02_MAGNIFIER = publicUrl(
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("זכוכית מגדלת.svg")}`,
+);
+
 const steps = [
   {
-    image: `${OLD_DESIGNS_BASE}/1.png`,
+    image: publicUrl(encodeURI("אירונים חדשים/מצפן.svg")),
     number: "01.",
     title: "מיפוי ואסטרטגיה",
     description:
       "הבסיס לכל מותג מנצח. יחד איתכם נכיר לעומק את אופי העסק ונתכנן תוכנית מיתוג אסטרטגית התפורה בדיוק לכם.",
   },
   {
-    image: `${OLD_DESIGNS_BASE}/2.png`,
+    image: STEP02_MAGNIFIER,
     number: "02.",
     title: "מחקר שוק ובידול",
     description:
       "נצלול לנתונים ונפענח את נקודות המפתח שיגרמו לכם להשאיר אבק למתחרים, לבנות סמכות בשוק ולהתבלט בכל זירה שבה העסק פועל.",
   },
   {
-    image: PALETTE_NEW_IMG,
+    image: publicUrl(encodeURI("אירונים חדשים/פלטת צבעים חדש SZG.svg")),
     number: "03.",
     title: "עיצוב מדויק",
     description:
@@ -113,7 +117,13 @@ export function ProcessSection() {
                   <img
                     src={step.image}
                     alt={`${step.number} ${step.title}`}
-                    className="w-full h-full object-contain"
+                    loading="lazy"
+                    decoding="async"
+                    className={
+                      index === 2
+                        ? "h-full w-full origin-center scale-[0.85] object-contain"
+                        : "h-full w-full object-contain"
+                    }
                   />
                 </div>
               </motion.div>
