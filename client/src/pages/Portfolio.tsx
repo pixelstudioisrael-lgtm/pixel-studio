@@ -7,11 +7,11 @@ import { useRef, useState, useEffect, useLayoutEffect } from "react";
 
 const HERO_BG = publicUrl("hero-background.webp");
 const FLYING_MACHINE = publicUrl("flying-machine-parallax.webp");
-/** public/אירונים חדשים/פלטת צבעים חדש SZG.svg — פלטה ליד מונה ליזה (דסקטופ + מובייל) */
+/** public/אירונים חדשים/פלטת צבעים חדש SZG.webp — פלטה ליד מונה ליזה (דסקטופ + מובייל) */
 const PALETTE_IMG = publicUrl(
-  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("פלטת צבעים חדש SZG.svg")}`,
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("פלטת צבעים חדש SZG.webp")}`,
 );
-const MONA_LISA_IMG = publicUrl(`__manus__/אמונה ליזה.png`);
+const MONA_LISA_IMG = publicUrl(`__manus__/${encodeURIComponent("אמונה ליזה.webp")}`);
 
 function shuffleWithSeed<T>(arr: T[], seed: number): T[] {
   const a = [...arr];
@@ -159,6 +159,8 @@ export default function Portfolio() {
           src={MONA_LISA_IMG}
           alt=""
           className="h-40 w-28 object-contain drop-shadow-xl"
+          loading="lazy"
+          decoding="async"
           aria-hidden
         />
       </motion.div>
@@ -306,6 +308,8 @@ export default function Portfolio() {
             src={MONA_LISA_IMG}
             alt=""
             className="max-h-full max-w-full object-contain drop-shadow-xl"
+            loading="lazy"
+            decoding="async"
             aria-hidden
           />
         </motion.div>

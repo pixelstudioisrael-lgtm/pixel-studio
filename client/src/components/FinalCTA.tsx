@@ -5,7 +5,7 @@ import { publicUrl } from "@/lib/publicUrl";
 const HERO_BG = publicUrl("hero-background.webp");
 const COMPASS_IMG = publicUrl(`__manus__/${encodeURIComponent("מחוגה.png")}`);
 const VITRUVIAN_IMG = publicUrl(
-  `__manus__/${encodeURIComponent("davinci-vitruvian-wireframe.png")}`,
+  `__manus__/${encodeURIComponent("davinci-vitruvian-wireframe.webp")}`,
 );
 
 const WA_HREF =

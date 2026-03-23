@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMemo } from "react";
+import { publicUrl } from "@/lib/publicUrl";
 import { HeroSection } from "@/components/HeroSection";
 import { useIsMobile } from "@/hooks/useMobile";
 import { ScrollHookSection } from "@/components/ScrollHookSection";
@@ -8,8 +9,8 @@ import { PortfolioSection } from "@/components/PortfolioSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FooterSection } from "@/components/FooterSection";
 
-const FLYING_MACHINE_IMG = `/${encodeURIComponent("מכונה מעופפת ללא רקע.png")}`;
-const CLOUD_IMG = `/${encodeURIComponent("עננים.png")}`;
+const FLYING_MACHINE_IMG = publicUrl(encodeURIComponent("מכונה מעופפת ללא רקע.webp"));
+const CLOUD_IMG = publicUrl("עננים.webp");
 
 /** מובייל: פיזור סימטרי לפני גלילה (RTL היה מכווץ לצד) */
 const CLOUD_LEFT_MOBILE = ["6%", "22%", "40%", "58%", "74%"] as const;
@@ -92,8 +93,11 @@ export default function Home() {
             <img
               src={CLOUD_IMG}
               alt=""
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-auto object-contain"
-              style={{ transform: `scale(${cloud.scale})` }}
+              style={{ transform: `scale(${cloud.scale * 1.15 * 1.3})` }}
             />
           </motion.div>
         ))}
@@ -110,6 +114,9 @@ export default function Home() {
           <img
             src={FLYING_MACHINE_IMG}
             alt=""
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="h-auto w-60 max-md:translate-y-6 object-contain drop-shadow-lg sm:w-72 md:w-[21rem] md:translate-y-20"
           />
         </motion.div>

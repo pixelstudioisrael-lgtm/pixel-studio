@@ -6,9 +6,9 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { publicUrl } from "@/lib/publicUrl";
 
-/** תמונה בראש תפריט המובייל — public/אירונים חדשים/מצפן.svg */
+/** תמונה בראש תפריט המובייל — public/אירונים חדשים/מצפן.webp */
 const MOBILE_MENU_IMG = publicUrl(
-  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("מצפן.svg")}`,
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("מצפן.webp")}`,
 );
 
 const NAV_ITEMS = [

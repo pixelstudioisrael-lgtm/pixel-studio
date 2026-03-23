@@ -2,14 +2,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { publicUrl } from "@/lib/publicUrl";
 
-/** public/אירונים חדשים/זכוכית מגדלת.svg — שלב 02 */
+/** public/אירונים חדשים/זכוכית מגדלת.webp — שלב 02 */
 const STEP02_MAGNIFIER = publicUrl(
-  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("זכוכית מגדלת.svg")}`,
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("זכוכית מגדלת.webp")}`,
 );
 
 const steps = [
   {
-    image: publicUrl(encodeURI("אירונים חדשים/מצפן.svg")),
+    image: publicUrl(
+      `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("מצפן.webp")}`,
+    ),
     number: "01.",
     title: "מיפוי ואסטרטגיה",
     description:
@@ -23,7 +25,9 @@ const steps = [
       "נצלול לנתונים ונפענח את נקודות המפתח שיגרמו לכם להשאיר אבק למתחרים, לבנות סמכות בשוק ולהתבלט בכל זירה שבה העסק פועל.",
   },
   {
-    image: publicUrl(encodeURI("אירונים חדשים/פלטת צבעים חדש SZG.svg")),
+    image: publicUrl(
+      `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("פלטת צבעים חדש SZG.webp")}`,
+    ),
     number: "03.",
     title: "עיצוב מדויק",
     description:

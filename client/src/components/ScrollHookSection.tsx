@@ -1,10 +1,15 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { publicUrl } from "@/lib/publicUrl";
 
-const VITRUVIAN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663459270785/T2vXmtCoKPgG35XUxSP9Qu/davinci-vitruvian-wireframe-QbC95aPwujWDa5WK93FEEr.webp";
-const GEARS = `/${encodeURIComponent("גלגלי שיניים ללא רקע.png")}`;
+const VITRUVIAN = publicUrl(
+  `__manus__/${encodeURIComponent("davinci-vitruvian-wireframe.webp")}`,
+);
+const GEARS = publicUrl(
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("גלגלי שיניים.webp")}`,
+);
 const MONA_LISA = "https://d2xsxph8kpxj0f.cloudfront.net/310519663459270785/T2vXmtCoKPgG35XUxSP9Qu/mona-lisa-faint-bkycUPnmpCCcUq8hTzk8YW.webp";
-const MONA_LISA_FRAMED = `/__manus__/${encodeURIComponent("אמונה ליזה.png")}`;
+const MONA_LISA_FRAMED = publicUrl(`__manus__/${encodeURIComponent("אמונה ליזה.webp")}`);
 
 export function ScrollHookSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -87,6 +92,8 @@ export function ScrollHookSection() {
               src={GEARS}
               alt=""
               className="h-full w-full object-contain opacity-40"
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
         </div>
@@ -102,6 +109,8 @@ export function ScrollHookSection() {
               src={GEARS}
               alt=""
               className="h-full w-full object-contain opacity-40"
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
         </div>
@@ -119,6 +128,8 @@ export function ScrollHookSection() {
             src={VITRUVIAN}
             alt="Vitruvian Man"
             className="h-full w-full object-contain drop-shadow-lg"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
 
@@ -135,6 +146,8 @@ export function ScrollHookSection() {
             src={MONA_LISA_FRAMED}
             alt="אמונה ליזה"
             className="h-full w-full object-contain drop-shadow-xl"
+            loading="lazy"
+            decoding="async"
             style={{ filter: "brightness(0.95) contrast(0.98)" }}
           />
         </motion.div>
@@ -151,6 +164,8 @@ export function ScrollHookSection() {
             src={GEARS}
             alt="Gears"
             className="h-full w-full object-contain opacity-40"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
 
@@ -165,6 +180,8 @@ export function ScrollHookSection() {
             src={GEARS}
             alt="Gears"
             className="h-full w-full object-contain opacity-40"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
 

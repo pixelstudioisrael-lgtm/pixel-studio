@@ -16,7 +16,9 @@ function useMatchMaxMd() {
 }
 
 const FLYING_MACHINE = publicUrl("flying-machine-parallax.webp");
-const LOGO = publicUrl("portfolio-assets/pixel-logo.svg");
+const LOGO = publicUrl(
+  `portfolio-assets/${encodeURIComponent("Pixel Studio LOGO (1).webp")}`,
+);
 
 const WA_HREF =
   "https://wa.me/972552892682?text=%D7%A9%D7%9C%D7%95%D7%9D%20Pixel%20Studio";
