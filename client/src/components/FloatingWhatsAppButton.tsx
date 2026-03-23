@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
-const WHATSAPP_ICON = `/${encodeURIComponent("פנימה.png")}`;
+import { publicUrl } from "@/lib/publicUrl";
+
+const WHATSAPP_ICON = publicUrl(encodeURIComponent("כפתור ווצאפ.webp"));
 
 /** אותו קישור כמו ב-FinalCTA / Footer */
 const WA_HREF =
@@ -28,6 +30,8 @@ export function FloatingWhatsAppButton() {
         alt="וואטסאפ"
         className="pointer-events-none h-8 w-8 object-contain"
         draggable={false}
+        loading="lazy"
+        decoding="async"
       />
     </motion.a>
   );

@@ -17,7 +17,7 @@ function useMatchMaxMd() {
 
 const FLYING_MACHINE = publicUrl("flying-machine-parallax.webp");
 const LOGO = publicUrl(
-  `portfolio-assets/${encodeURIComponent("Pixel Studio LOGO (1).webp")}`,
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("Pixel Studio LOGO NEW.webp")}`,
 );
 
 const WA_HREF =
