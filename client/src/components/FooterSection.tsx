@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { CompassSpinDecoration } from "@/components/CompassSpinDecoration";
 import { ContactSection } from "@/components/ContactSection";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { publicUrl } from "@/lib/publicUrl";
 
-const COMPASS_IMG = publicUrl(`__manus__/${encodeURIComponent("מחוגה.png")}`);
 const FOOTER_BG = publicUrl("hero-background.webp");
 
 const EMAIL = "pixelstudioisrael@gmail.com";
@@ -13,41 +12,6 @@ const MAILTO = `mailto:${EMAIL}`;
 const WA_DISPLAY = "0552892682";
 const WA_HREF = "https://wa.me/972552892682";
 const ADDRESS = "החצב 1, זיכרון יעקב";
-
-/** מחוגה — סיבוב בכניסה לתצוגה, ואז כל 5 שניות */
-function FooterCompassDecoration() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.35 });
-  const reduceMotion = useReducedMotion();
-  const [spinCount, setSpinCount] = useState(0);
-
-  useEffect(() => {
-    if (!inView || reduceMotion) return;
-    setSpinCount(1);
-    const id = window.setInterval(() => {
-      setSpinCount((c) => c + 1);
-    }, 5000);
-    return () => clearInterval(id);
-  }, [inView, reduceMotion]);
-
-  return (
-    <div ref={ref} className="flex shrink-0 items-center justify-center" aria-hidden>
-      <motion.div
-        className="pointer-events-none w-[min(5.5rem,28vw)] shrink-0 md:w-24"
-        animate={{ rotate: reduceMotion ? 0 : spinCount * 360 }}
-        transition={{ duration: 1.05, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <img
-          src={COMPASS_IMG}
-          alt=""
-          className="h-auto w-full object-contain opacity-[0.92] drop-shadow-md mix-blend-multiply saturate-[0.85]"
-          loading="lazy"
-          decoding="async"
-        />
-      </motion.div>
-    </div>
-  );
-}
 
 export function FooterSection() {
   return (
@@ -71,7 +35,7 @@ export function FooterSection() {
         className="pointer-events-none absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2"
         aria-hidden
       >
-        <FooterCompassDecoration />
+        <CompassSpinDecoration />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
@@ -83,10 +47,10 @@ export function FooterSection() {
             viewport={{ once: true }}
             className="flex flex-col items-center text-center md:items-start md:text-right"
           >
-            <h2 className="display-font mb-4 max-w-xl text-3xl font-black leading-tight text-[#111111] md:mb-6 md:text-4xl lg:text-5xl">
+            <h2 className="display-font mb-4 max-w-xl text-3xl font-black leading-tight text-[#722F37] md:mb-6 md:text-4xl lg:text-5xl">
               לשיחת אסטרטגיה חינם צרו איתנו קשר
             </h2>
-            <p className="body-font max-w-xl text-base leading-relaxed text-slate-700 md:text-lg">
+            <p className="body-font max-w-xl text-base leading-relaxed text-[#111111] md:text-lg">
               אנחנו כאן כדי להפוך את הרעיון שלך למציאות מדהימה. בואו נדבר על איך אנו יכולים לעזור לעסק שלך.
             </p>
           </motion.div>
@@ -115,7 +79,7 @@ export function FooterSection() {
               transition={{ type: "spring", stiffness: 400, damping: 28 }}
             >
               <MapPin className="h-5 w-5 shrink-0 text-[#D4AF37]" strokeWidth={2} aria-hidden />
-              <span className="body-font text-slate-700">{ADDRESS}</span>
+              <span className="body-font text-[#111111]">{ADDRESS}</span>
             </motion.div>
 
             <motion.div
@@ -142,14 +106,14 @@ export function FooterSection() {
                 href={WA_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="body-font text-slate-700 transition-colors hover:text-[#b8942e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F9F6F0]"
+                className="body-font text-[#111111] transition-colors hover:text-[#b8942e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F9F6F0]"
               >
                 {WA_DISPLAY}
               </a>
             </motion.div>
           </div>
 
-          <p className="body-font text-center text-sm text-slate-600">
+          <p className="body-font text-center text-sm text-[#111111]">
             © 2026 Pixel Studio. כל הזכויות שמורות.
           </p>
         </div>

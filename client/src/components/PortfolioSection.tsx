@@ -119,7 +119,7 @@ export function PortfolioSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          <h2 className="display-font mb-4 font-black text-[#111111] text-5xl md:text-6xl max-md:max-w-full max-md:whitespace-nowrap max-md:leading-[1.05] max-md:text-[clamp(1.35rem,8.5vw,2.75rem)]">
+          <h2 className="display-font mb-4 font-black text-[#722F37] text-5xl md:text-6xl max-md:max-w-full max-md:whitespace-nowrap max-md:leading-[1.05] max-md:text-[clamp(1.35rem,8.5vw,2.75rem)]">
             גלריית עבודות
           </h2>
           <div className="mx-auto h-0.5 w-24 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
@@ -205,7 +205,7 @@ export function PortfolioSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-[#999999] body-font italic mb-6">
+          <p className="text-[#722F37] body-font italic mb-6">
             {"\u201Cפשטות היא התחכום האולטימטיבי.\u201D — לאונרדו דה וינצ'י"}
           </p>
           <motion.button

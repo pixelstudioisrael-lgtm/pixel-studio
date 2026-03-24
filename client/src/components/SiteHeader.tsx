@@ -167,8 +167,8 @@ export function SiteHeader() {
         </button>
         <span
           lang="en"
-          className="shrink-0 whitespace-nowrap text-[#D4AF37] font-extralight text-[11px] tracking-[0.06em]"
-          style={{ fontFamily: "system-ui, 'Segoe UI', sans-serif" }}
+          className="shrink-0 whitespace-nowrap text-black font-extralight text-[11px] tracking-[0.06em]"
+          style={{ fontFamily: '"Apple Color Emoji"' }}
         >
           PIXEL STUDIO
         </span>

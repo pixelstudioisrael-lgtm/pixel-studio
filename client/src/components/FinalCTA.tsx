@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Phone } from "lucide-react";
+import { CompassSpinDecoration } from "@/components/CompassSpinDecoration";
 import { publicUrl } from "@/lib/publicUrl";
 
 const HERO_BG = publicUrl("hero-background.webp");
@@ -35,6 +36,14 @@ export function FinalCTA() {
               "linear-gradient(135deg, #f2e6c8 0%, #e0c66a 18%, #d4af37 42%, #b8942e 62%, #8a6a12 88%, #5c4810 100%)",
           }}
         >
+          {/* מחוגה מסתובבת — כמו בפוטר, ממורכזת על קו המסגרת העליון */}
+          <div
+            className="pointer-events-none absolute left-1/2 top-0 z-30 -translate-x-1/2 -translate-y-1/2"
+            aria-hidden
+          >
+            <CompassSpinDecoration />
+          </div>
+
           <div className="relative overflow-hidden rounded-[2px] bg-[#F9F6F0]">
             <div className="pointer-events-none absolute inset-0 bg-[#F9F6F0]" aria-hidden />
             <div
@@ -74,7 +83,7 @@ export function FinalCTA() {
                 הגיע הזמן לקחת את המותג שלכם לשלב הבא.
               </h2>
 
-              <p className="body-font mx-auto mb-6 max-w-2xl text-base leading-relaxed text-gray-700 sm:text-lg md:mb-8 md:text-xl md:leading-[1.7]">
+              <p className="body-font mx-auto mb-6 max-w-2xl text-base leading-relaxed text-[#111111] sm:text-lg md:mb-8 md:text-xl md:leading-[1.7]">
                 הצטרפו ל
                 <span className="bg-gradient-to-r from-[#8a6a12] via-[#c9a227] to-[#a67c1a] bg-clip-text font-semibold text-transparent">
                   מאות בעלי עסקים

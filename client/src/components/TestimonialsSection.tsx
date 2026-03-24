@@ -242,7 +242,7 @@ export function TestimonialsSection() {
           className="mb-16 w-full min-w-0 text-center max-md:overflow-x-hidden"
         >
           {/* מובייל: משפט ארוך — גודל גופן לפי רוחב מסך כדי שלא יגלוש; שורה אחת; ממורכז */}
-          <h2 className="display-font mb-4 block w-full min-w-0 font-black text-[#111111] text-5xl md:text-6xl max-md:mx-auto max-md:max-w-full max-md:whitespace-nowrap max-md:px-1 max-md:leading-[1.05] max-md:text-[max(0.75rem,min(2.75rem,calc((100vw-2rem)/15)))]">
+          <h2 className="display-font mb-4 block w-full min-w-0 font-black text-[#722F37] text-5xl md:text-6xl max-md:mx-auto max-md:max-w-full max-md:whitespace-nowrap max-md:px-1 max-md:leading-[1.05] max-md:text-[max(0.75rem,min(2.75rem,calc((100vw-2rem)/15)))]">
             מה אומרים הלקוחות שלנו
           </h2>
           <div className="mx-auto h-0.5 w-24 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />

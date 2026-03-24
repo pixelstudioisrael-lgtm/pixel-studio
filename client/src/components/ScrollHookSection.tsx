@@ -193,14 +193,14 @@ export function ScrollHookSection() {
           }}
         >
           <motion.div
-            className="display-font max-md:max-w-full max-md:whitespace-nowrap max-md:leading-[1.05] max-md:text-[clamp(1.35rem,8.5vw,2.75rem)] text-5xl md:text-6xl font-black text-[#111111]"
+            className="display-font max-md:max-w-full max-md:whitespace-nowrap max-md:leading-[1.05] max-md:text-[clamp(1.35rem,8.5vw,2.75rem)] text-5xl md:text-6xl font-black text-[#722F37]"
             style={{
               scale: useTransform(scrollYProgress, [0, 0.3, 1], [0.8, 1, 1]),
             }}
           >
             אז מי אנחנו?
           </motion.div>
-          <p className="mt-4 text-[#666666] text-base md:text-lg leading-relaxed body-font max-w-3xl mx-auto">
+          <p className="mt-4 text-[#111111] text-base md:text-lg leading-relaxed body-font max-w-3xl mx-auto">
             Pixel Studio מתמחה במיתוג מקיף למגוון רחב של עסקים. בעזרת נבחרת המעצבים המוכשרים שלנו,
             אנו מעניקים מעטפת עיצובית מלאה - מלוגו ועד כרטיס ביקור וכל נכסי המותג - כדי להבטיח שהעסק
             שלכם יבלוט בדיוק בצורה שמגיעה לו.
@@ -236,8 +236,13 @@ export function ScrollHookSection() {
         }
       >
         <p
-          className="body-font relative z-[101] mx-auto max-w-3xl text-center text-base font-medium italic leading-snug tracking-wide text-[#5a4f3c] drop-shadow-[0_1px_2px_rgba(249,246,240,0.9)] sm:text-lg md:text-xl md:leading-relaxed lg:text-[1.35rem]"
-          style={{ textWrap: "balance" }}
+          className="pixel-no-ui-frame body-font relative z-[101] mx-auto max-w-3xl text-center text-base font-medium italic leading-snug tracking-wide text-[#722F37] sm:text-lg md:text-xl md:leading-relaxed lg:text-[1.35rem]"
+          style={{
+            textWrap: "balance",
+            border: "none",
+            outline: "none",
+            boxShadow: "none",
+          }}
         >
           {"\u201Cפרטים יוצרים שלמות, ושלמות אינה פרט.\u201D — לאונרדו דה וינצ'י"}
         </p>

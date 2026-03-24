@@ -86,8 +86,9 @@
 }
 
 @layer base {
+  /* רק צבע מסגרת ברירת מחדל — בלי outline גלובלי שעלול להתנגש עם כלי עריכה/בחירה */
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   
   html {
@@ -236,6 +237,19 @@
     background-repeat: repeat-y;
     background-size: 100% auto;
     background-position: center top;
+  }
+
+  /**
+   * מסגרות/צללים שנוספים דרך כלי preview או הזרקות DOM —
+   * איפוס מפורש כדי שהטקסט יישאר "רגיל" בלי ריבוע.
+   */
+  .pixel-no-ui-frame {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
   }
 
   /* Hide Hero scroll indicator (gold pill with dot) */

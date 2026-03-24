@@ -118,7 +118,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="display-font mb-5 max-w-[22rem] text-center text-4xl font-black leading-[1.1] tracking-tighter text-[#111111] max-md:max-w-full max-md:whitespace-nowrap max-md:leading-[1.05] max-md:text-[clamp(1.35rem,8.5vw,2.75rem)] sm:max-w-none md:mb-7 md:text-6xl"
+          className="display-font mb-5 max-w-[22rem] text-center text-4xl font-black leading-[1.1] tracking-tighter text-[#722F37] max-md:max-w-full max-md:whitespace-nowrap max-md:leading-[1.05] max-md:text-[clamp(1.35rem,8.5vw,2.75rem)] sm:max-w-none md:mb-7 md:text-6xl"
         >
           מרעיון ליצירת מופת.
         </motion.h1>
@@ -127,7 +127,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="body-font mb-8 max-w-2xl text-center text-base leading-relaxed text-gray-800 md:mb-10 md:text-xl md:leading-relaxed"
+          className="body-font mb-8 max-w-2xl text-center text-base leading-relaxed text-[#111111] md:mb-10 md:text-xl md:leading-relaxed"
         >
           ב-Pixel Studio אנחנו לא מעצבים{" "}
           <span className="whitespace-nowrap">

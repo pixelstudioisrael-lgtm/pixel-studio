@@ -182,7 +182,7 @@ export default function Portfolio() {
             </h1>
             <div className="mx-auto h-0.5 w-24 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
             <p
-              className="body-font mx-auto mb-5 mt-3 max-w-2xl bg-gradient-to-r from-[#5a4a28] via-[#a89038] to-[#5a4a28] bg-clip-text text-center text-sm italic leading-relaxed tracking-wide text-transparent md:mt-4 md:mb-6"
+              className="body-font mx-auto mb-5 mt-3 max-w-2xl text-center text-sm italic leading-relaxed tracking-wide text-[#722F37] md:mt-4 md:mb-6"
               style={{ textWrap: "balance" }}
             >
               {

@@ -70,7 +70,7 @@ export function ProcessSection() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-[#111111] mb-4 display-font">
+          <h2 className="text-4xl md:text-5xl font-black text-[#722F37] mb-4 display-font">
             התהליך שלנו
           </h2>
           <div className="mx-auto h-0.5 w-20 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
@@ -101,11 +101,16 @@ export function ProcessSection() {
                     : "flex flex-1 flex-col items-stretch text-right md:items-end"
                 }
               >
-                <h3 className="mb-3 display-font text-2xl font-bold text-[#111111] md:text-3xl">
-                  <span className="font-extrabold text-[#D4AF37]">{step.number}</span>{" "}
+                <h3 className="mb-3 display-font text-2xl font-bold text-[#722F37] md:text-3xl">
+                  <span
+                    className="pixel-no-ui-frame font-extrabold text-[#D4AF37]"
+                    style={{ border: "none", outline: "none", boxShadow: "none" }}
+                  >
+                    {step.number}
+                  </span>{" "}
                   <span>{step.title}</span>
                 </h3>
-                <p className="body-font max-w-xl text-base leading-relaxed text-[#444444] md:text-lg">
+                <p className="body-font max-w-xl text-base leading-relaxed text-[#111111] md:text-lg">
                   {step.description}
                 </p>
               </div>
