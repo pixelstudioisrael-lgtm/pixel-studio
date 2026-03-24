@@ -2,7 +2,7 @@ import { type FormEvent, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-const WEB3FORMS_ACCESS_KEY = "4f7669c6-d736-4962-a5c2-d2658f04c89c";
+const WEB3FORMS_ACCESS_KEY = "d231da9a-ca21-4d22-bd14-e944b4dc0947";
 
 const SUCCESS_MESSAGE =
   "תודה! הפרטים התקבלו בהצלחה. הצוות שלנו כבר בוחן את הבקשה ויחזור אליך בהקדם לתיאום שיחת אפיון.";
@@ -61,15 +61,16 @@ export function ContactSection() {
 
       const data = (await res.json()) as { success?: boolean };
 
-      if (data.success) {
-        setSuccess(true);
-        setName("");
-        setPhone("");
-        setMessage("");
-        setPhoneBlurred(false);
-      } else {
+      if (!res.ok || !data.success) {
         setError(true);
+        return;
       }
+
+      setSuccess(true);
+      setName("");
+      setPhone("");
+      setMessage("");
+      setPhoneBlurred(false);
     } catch {
       setError(true);
     } finally {
