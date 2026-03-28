@@ -27,8 +27,21 @@ function shuffleWithSeed<T>(arr: T[], seed: number): T[] {
 const IMAGE_INDICES = Array.from({ length: 64 }, (_, i) => i + 1);
 const SHUFFLED_IMAGES = shuffleWithSeed(IMAGE_INDICES, 42);
 
+/** תמונות מותאמות במקום קבצי Gallery/{n}.webp */
+const REAL_FIT_IMG = publicUrl(encodeURIComponent("REAL FIT T.webp"));
+const SADA_CAP_IMG = publicUrl(encodeURIComponent("SADA CAP.webp"));
+const BABA_IMG = publicUrl(
+  `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("BABA.webp")}`,
+);
+
+const GALLERY_OVERRIDES: Record<number, string> = {
+  18: SADA_CAP_IMG,
+  27: BABA_IMG,
+  38: REAL_FIT_IMG,
+};
+
 const portfolioItems = SHUFFLED_IMAGES.map((idx) => ({
-  src: publicUrl(`Gallery/${idx}.webp`),
+  src: GALLERY_OVERRIDES[idx] ?? publicUrl(`Gallery/${idx}.webp`),
 }));
 
 /** קו עליון של שכבת הדקורציה במובייל — נמוך מהציטוט כדי שלא יכסה את הטקסט (היה 168px) */

@@ -30,7 +30,7 @@ const projects = [
     title: "Naama Hrshkovitz",
     category: "Branding",
     description: "Eyebrows Artist",
-    image: publicUrl("Gallery/52.webp"),
+    image: publicUrl(encodeURIComponent("REAL FIT T.webp")),
   },
   {
     title: "Raziel Jewelry",
