@@ -11,7 +11,7 @@ const projects = [
   {
     title: "אלי קדושים",
     category: "Branding",
-    description: "ביטוח • פנסיה • פיננסים",
+    description: "ייעוץ פיננסי • ביטוח • פנסיה",
     image: publicUrl("Gallery/11.webp"),
   },
   {
@@ -23,44 +23,38 @@ const projects = [
   {
     title: "Silora Couture",
     category: "Branding",
-    description: "Bridal Dresses Atelier",
+    description: "שמלות כלה • אטלייה",
     image: publicUrl("Gallery/53.webp"),
   },
   {
-    title: "Naama Hrshkovitz",
+    title: "REAL FIT",
     category: "Branding",
-    description: "Eyebrows Artist",
+    description: "כושר • בריאות • לייף סטייל",
     image: publicUrl(encodeURIComponent("REAL FIT T.webp")),
   },
   {
     title: "Raziel Jewelry",
     category: "Branding",
-    description: "זוהר של רגעים בלתי נשכחים",
+    description: "תכשיטים • זוהר של רגעים בלתי נשכחים",
     image: publicUrl("Gallery/6.webp"),
   },
   {
     title: "Elistone Solutions",
     category: "Branding",
-    description: "Your Natural Choice",
+    description: "מוצרים טבעיים • הבחירה הטבעית שלך",
     image: publicUrl("Gallery/7.webp"),
   },
   {
     title: "Elifine",
     category: "Branding",
-    description: "Hair Designer",
+    description: "מעצב שיער",
     image: publicUrl("Gallery/1.webp"),
   },
   {
-    title: "יולי בולבי",
+    title: "SADA",
     category: "Branding",
-    description: "Medical Esthetician",
-    image: publicUrl("Gallery/38.webp"),
-  },
-  {
-    title: "תהל אור",
-    category: "Branding",
-    description: "חשמלאי מוסמך • מקצוענות פוגשת אמינות",
-    image: publicUrl("Gallery/24.webp"),
+    description: "קפה ברמה אחרת",
+    image: publicUrl(`Gallery/${encodeURIComponent("Untitled design חדש.webp")}`),
   },
 ];
 
@@ -125,7 +119,7 @@ export function PortfolioSection() {
           <div className="mx-auto h-0.5 w-24 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
         </motion.div>
 
-        {/* Museum Gallery Grid — מובייל: 2 בעמודה × 3 שורות (6 פריטים); md+: ללא שינוי */}
+        {/* Museum Gallery Grid — 2 עמודות במובייל/md, lg: 3 */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-stretch gap-2 sm:gap-3 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -135,11 +129,7 @@ export function PortfolioSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-100px" }}
               whileHover={{ y: -12 }}
-              className={
-                index >= 6
-                  ? "group hidden h-full cursor-pointer md:flex"
-                  : "group flex h-full cursor-pointer"
-              }
+              className="group flex h-full cursor-pointer"
               onClick={() => setLightboxIndex(index)}
             >
               {/* Vintage Frame — ריפוד מינימלי, גובה שווה בשורה */}

@@ -29,13 +29,15 @@ const SHUFFLED_IMAGES = shuffleWithSeed(IMAGE_INDICES, 42);
 
 /** תמונות מותאמות במקום קבצי Gallery/{n}.webp */
 const REAL_FIT_IMG = publicUrl(encodeURIComponent("REAL FIT T.webp"));
-const SADA_CAP_IMG = publicUrl(encodeURIComponent("SADA CAP.webp"));
+const UNTITLED_DESIGN_NEW_IMG = publicUrl(
+  `Gallery/${encodeURIComponent("Untitled design חדש.webp")}`,
+);
 const BABA_IMG = publicUrl(
   `${encodeURIComponent("אירונים חדשים")}/${encodeURIComponent("BABA.webp")}`,
 );
 
 const GALLERY_OVERRIDES: Record<number, string> = {
-  18: SADA_CAP_IMG,
+  18: UNTITLED_DESIGN_NEW_IMG,
   27: BABA_IMG,
   38: REAL_FIT_IMG,
 };
