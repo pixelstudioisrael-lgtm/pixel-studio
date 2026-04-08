@@ -115,7 +115,7 @@ export function FibonacciSpiral({ onComplete }: FibonacciSpiralProps) {
       {/* Studio Logo with entrance animation */}
       <motion.img
         src={LOGO}
-        alt="Pixel Studio Logo"
+        alt="Pixel Design Logo"
         className="relative z-10 w-32 h-32 object-contain"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}

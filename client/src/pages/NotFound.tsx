@@ -1,10 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { NOT_FOUND_PAGE_DESCRIPTION, NOT_FOUND_PAGE_TITLE, setPageMeta } from "@/lib/pageMeta";
 import { AlertCircle, Home } from "lucide-react";
+import { useEffect } from "react";
 import { useLocation } from "wouter";
 
 export default function NotFound() {
   const [, setLocation] = useLocation();
+
+  useEffect(() => {
+    setPageMeta(NOT_FOUND_PAGE_TITLE, NOT_FOUND_PAGE_DESCRIPTION);
+  }, []);
 
   const handleGoHome = () => {
     setLocation("/");

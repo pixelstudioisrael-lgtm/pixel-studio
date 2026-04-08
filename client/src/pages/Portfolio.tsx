@@ -1,5 +1,6 @@
 import { FinalCTA } from "@/components/FinalCTA";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
+import { PORTFOLIO_PAGE_DESCRIPTION, PORTFOLIO_PAGE_TITLE, setPageMeta } from "@/lib/pageMeta";
 import { publicUrl } from "@/lib/publicUrl";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -59,6 +60,10 @@ export default function Portfolio() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    setPageMeta(PORTFOLIO_PAGE_TITLE, PORTFOLIO_PAGE_DESCRIPTION);
   }, []);
 
   useEffect(() => {

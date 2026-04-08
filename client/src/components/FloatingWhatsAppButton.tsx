@@ -6,7 +6,7 @@ const WHATSAPP_ICON = publicUrl(encodeURIComponent("כפתור ווצאפ.webp")
 
 /** אותו קישור כמו ב-FinalCTA / Footer */
 const WA_HREF =
-  "https://wa.me/972552892682?text=%D7%A9%D7%9C%D7%95%D7%9D%20Pixel%20Studio";
+  "https://wa.me/972552892682?text=%D7%A9%D7%9C%D7%95%D7%9D%20Pixel%20Design";
 
 /**
  * כפתור וואטסאפ צף — קבוע למטה-שמאל (מתאים ל־RTL).

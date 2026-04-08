@@ -10,7 +10,7 @@ const VITRUVIAN_IMG = publicUrl(
 );
 
 const WA_HREF =
-  "https://wa.me/972552892682?text=%D7%A9%D7%9C%D7%95%D7%9D%20Pixel%20Studio";
+  "https://wa.me/972552892682?text=%D7%A9%D7%9C%D7%95%D7%9D%20Pixel%20Design";
 
 /**
  * CTA סיום גלריה — מסגרת זהב רציפה, רקע שרטוט + מחוגה / ויטרוביוס כמו באתר.

@@ -21,7 +21,7 @@ const LOGO = publicUrl(
 );
 
 const WA_HREF =
-  "https://wa.me/972552892682?text=%D7%A9%D7%9C%D7%95%D7%9D%20Pixel%20Studio";
+  "https://wa.me/972552892682?text=%D7%A9%D7%9C%D7%95%D7%9D%20Pixel%20Design";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -78,7 +78,7 @@ export function HeroSection() {
         >
           <motion.img
             src={LOGO}
-            alt="Pixel Studio Logo"
+            alt="Pixel Design Logo"
             width={256}
             height={256}
             loading="eager"
@@ -129,7 +129,7 @@ export function HeroSection() {
           transition={{ duration: 0.85, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="body-font mb-8 max-w-2xl text-center text-base leading-relaxed text-[#111111] md:mb-10 md:text-xl md:leading-relaxed"
         >
-          ב-Pixel Studio אנחנו לא מעצבים{" "}
+          ב-Pixel Design אנחנו לא מעצבים{" "}
           <span className="whitespace-nowrap">
             {"\u201Cסתם עוד לוגו\u201D"}.
           </span>{" "}

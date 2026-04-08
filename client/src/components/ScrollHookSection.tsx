@@ -201,7 +201,7 @@ export function ScrollHookSection() {
             אז מי אנחנו?
           </motion.div>
           <p className="mt-4 text-[#111111] text-base md:text-lg leading-relaxed body-font max-w-3xl mx-auto">
-            Pixel Studio מתמחה במיתוג מקיף למגוון רחב של עסקים. בעזרת נבחרת המעצבים המוכשרים שלנו,
+            Pixel Design מתמחה במיתוג מקיף למגוון רחב של עסקים. בעזרת נבחרת המעצבים המוכשרים שלנו,
             אנו מעניקים מעטפת עיצובית מלאה - מלוגו ועד כרטיס ביקור וכל נכסי המותג - כדי להבטיח שהעסק
             שלכם יבלוט בדיוק בצורה שמגיעה לו.
           </p>

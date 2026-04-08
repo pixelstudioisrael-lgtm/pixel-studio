@@ -1,6 +1,7 @@
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { TERMS_PAGE_DESCRIPTION, TERMS_PAGE_TITLE, setPageMeta } from "@/lib/pageMeta";
 import { publicUrl } from "@/lib/publicUrl";
 
 const HERO_BG = publicUrl("hero-background.webp");
@@ -8,6 +9,10 @@ const HERO_BG = publicUrl("hero-background.webp");
 export default function Terms() {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    setPageMeta(TERMS_PAGE_TITLE, TERMS_PAGE_DESCRIPTION);
   }, []);
 
   return (
@@ -32,7 +37,7 @@ export default function Terms() {
             animate={{ opacity: 1, y: 0 }}
             className="display-font mb-3 text-2xl font-black leading-tight md:mb-4 md:text-3xl"
           >
-            תקנון ותנאי שירות – שירותי עיצוב גרפי | Pixel Studio
+            תקנון ותנאי שירות – שירותי עיצוב גרפי | Pixel Design
           </motion.h1>
 
           <p className="body-font text-sm text-[#666666] md:text-base" dir="rtl">
@@ -47,7 +52,7 @@ export default function Terms() {
           className="body-font space-y-10 leading-relaxed text-[#333333]"
         >
           <p>
-            ברוכים הבאים ל-Pixel Studio. תקנון זה נועד להסדיר את התנאים החלים על קבלת שירותי עיצוב גרפי, ומהווה
+            ברוכים הבאים ל-Pixel Design. תקנון זה נועד להסדיר את התנאים החלים על קבלת שירותי עיצוב גרפי, ומהווה
             הסכם מחייב ביניכם לבין הסטודיו. ביצוע הזמנה ותשלום מקדמה מהווים אישור והסכמה מלאה לתנאים המפורטים
             בתקנון זה.
           </p>
@@ -56,7 +61,7 @@ export default function Terms() {
             <h2 className="display-font mb-4 text-xl font-bold text-[#111111]">1. הגדרות כלליות</h2>
             <ul className="list-inside list-disc space-y-2 marker:text-[#D4AF37]">
               <li>
-                <strong className="text-[#111111]">הסטודיו:</strong> Pixel Studio (עוסק פטור מס&apos; 209884675).
+                <strong className="text-[#111111]">הסטודיו:</strong> Pixel Design (עוסק פטור מס&apos; 209884675).
               </li>
               <li>
                 <strong className="text-[#111111]">הלקוח:</strong> מזמין עבודת העיצוב.
@@ -110,7 +115,7 @@ export default function Terms() {
             <h2 className="display-font mb-4 text-xl font-bold text-[#111111]">4. תנאי תשלום</h2>
             <ul className="list-inside list-disc space-y-3 marker:text-[#D4AF37]">
               <li>
-                Pixel Studio הינו &quot;עוסק פטור&quot; כדין, ולכן מחירי השירותים אינם כוללים מע&quot;מ (ולא
+                Pixel Design הינו &quot;עוסק פטור&quot; כדין, ולכן מחירי השירותים אינם כוללים מע&quot;מ (ולא
                 יתווסף מע&quot;מ במעמד התשלום).
               </li>
               <li>תחילת העבודה מותנית בתשלום מקדמה בגובה 60% מסך העסקה.</li>

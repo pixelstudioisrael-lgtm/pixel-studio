@@ -7,7 +7,7 @@ import { publicUrl } from "@/lib/publicUrl";
 
 const FOOTER_BG = publicUrl("hero-background.webp");
 
-const EMAIL = "pixelstudioisrael@gmail.com";
+const EMAIL = "pixel.design.il.team@gmail.com";
 const MAILTO = `mailto:${EMAIL}`;
 const WA_DISPLAY = "0552892682";
 const WA_HREF = "https://wa.me/972552892682";
@@ -114,7 +114,7 @@ export function FooterSection() {
           </div>
 
           <p className="body-font text-center text-sm text-[#111111]">
-            © 2026 Pixel Studio. כל הזכויות שמורות.
+            © 2026 Pixel Design. כל הזכויות שמורות.
           </p>
         </div>
       </div>

@@ -55,7 +55,7 @@ export function ContactSection() {
           name: name.trim(),
           phone: digitsOnly(phone),
           message: message.trim(),
-          subject: "Pixel Studio — יצירת קשר מהאתר",
+          subject: "Pixel Design — יצירת קשר מהאתר",
         }),
       });
 

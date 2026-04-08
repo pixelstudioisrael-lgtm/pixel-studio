@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { publicUrl } from "@/lib/publicUrl";
 import { HeroSection } from "@/components/HeroSection";
 import { useIsMobile } from "@/hooks/useMobile";
@@ -8,6 +8,7 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FooterSection } from "@/components/FooterSection";
+import { HOME_PAGE_DESCRIPTION, HOME_PAGE_TITLE, setPageMeta } from "@/lib/pageMeta";
 
 const FLYING_MACHINE_IMG = publicUrl(encodeURIComponent("מכונה מעופפת ללא רקע.webp"));
 const CLOUD_IMG = publicUrl("עננים.webp");
@@ -17,7 +18,7 @@ const CLOUD_LEFT_MOBILE = ["6%", "22%", "40%", "58%", "74%"] as const;
 const CLOUD_LEFT_DESKTOP = ["8%", "28%", "48%", "62%", "78%"] as const;
 
 /**
- * Pixel Studio - Premium Landing Page
+ * Pixel Design - Premium Landing Page
  * Design Philosophy: Modern Renaissance Maximalism
  *
  * Color Palette:
@@ -38,6 +39,10 @@ const CLOUD_LEFT_DESKTOP = ["8%", "28%", "48%", "62%", "78%"] as const;
  */
 
 export default function Home() {
+  useEffect(() => {
+    setPageMeta(HOME_PAGE_TITLE, HOME_PAGE_DESCRIPTION);
+  }, []);
+
   const { scrollY } = useScroll();
   const isMobile = useIsMobile();
 

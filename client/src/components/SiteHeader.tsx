@@ -153,7 +153,7 @@ export function SiteHeader() {
       className="sticky top-0 z-[200] w-full border-b border-[#E8E5DC] bg-[#F9F6F0]/95 backdrop-blur-md shadow-sm"
       role="banner"
     >
-      {/* מובייל: המבורגר מימין, PIXEL STUDIO משמאל (ב־RTL: ראשון=ימין, שני=שמאל) */}
+      {/* מובייל: המבורגר מימין, PIXEL DESIGN משמאל (ב־RTL: ראשון=ימין, שני=שמאל) */}
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:hidden">
         <button
           type="button"
@@ -170,7 +170,7 @@ export function SiteHeader() {
           className="shrink-0 whitespace-nowrap text-black font-extralight text-[11px] tracking-[0.06em]"
           style={{ fontFamily: '"Apple Color Emoji"' }}
         >
-          PIXEL STUDIO
+          PIXEL DESIGN
         </span>
       </div>
 
@@ -196,7 +196,7 @@ export function SiteHeader() {
           className="shrink-0 whitespace-nowrap text-[#D4AF37] font-extralight text-sm tracking-[0.2em] md:text-base"
           style={{ fontFamily: "system-ui, 'Segoe UI', sans-serif" }}
         >
-          PIXEL STUDIO
+          PIXEL DESIGN
         </span>
       </nav>
     </header>
